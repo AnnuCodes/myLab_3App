@@ -1,5 +1,6 @@
 import {
   IonBackButton,
+  IonButton,
   IonButtons,
   IonContent,
   IonHeader,
@@ -9,9 +10,11 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import React from "react";
+import React, { useState } from "react";
 
 const NewList: React.FC = () => {
+  const [list, setlist] = useState("");
+  const handleClick = () => {};
   return (
     <IonPage>
       <IonHeader>
@@ -25,6 +28,9 @@ const NewList: React.FC = () => {
       <IonContent className="ion-padding">
         <IonItem>
           <IonInput label="Text input" placeholder="Write list here"></IonInput>
+          <IonItem slot="end">
+            <IonButton onClick={handleClick}>Save</IonButton>
+          </IonItem>
         </IonItem>
       </IonContent>
     </IonPage>

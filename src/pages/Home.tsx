@@ -4,6 +4,7 @@ import {
   IonHeader,
   IonItem,
   IonList,
+  IonMenu,
   IonPage,
   IonTitle,
   IonToolbar,
@@ -14,15 +15,10 @@ import "./Home.css";
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>My Groceries</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
+        <IonHeader>
           <IonToolbar>
-            <IonTitle size="large">Where is this</IonTitle>
+            <IonTitle size="large">My groceries</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonList>
@@ -33,7 +29,9 @@ const Home: React.FC = () => {
             Select previous list
           </IonItem>
 
-          <IonItem button>Supermarket locations</IonItem>
+          <IonItem button routerLink="/Supermarkets">
+            Supermarket locations
+          </IonItem>
         </IonList>
       </IonContent>
     </IonPage>
