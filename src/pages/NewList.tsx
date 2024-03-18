@@ -15,11 +15,12 @@ import React, { useState } from "react";
 
 const NewList: React.FC = () => {
   const [input, setInput] = useState<string>("");
+  const [text, setText] = useState<string>();
 
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="tertiary">
           <IonButtons slot="start">
             <IonBackButton></IonBackButton>
           </IonButtons>
@@ -30,19 +31,28 @@ const NewList: React.FC = () => {
         <IonItem>
           <IonInput
             label="Text input"
-            placeholder="Write list here"
-            value={input}
+            placeholder="Write item here"
+            value={text}
             onIonChange={(e: any) => setInput(e.target.value)}
           ></IonInput>
           <IonItem slot="end">
-            <IonButton>Save</IonButton>
+            <IonButton
+              color="tertiary"
+              onClick={() => {
+                setText("");
+              }}
+            >
+              Save
+            </IonButton>
           </IonItem>
         </IonItem>
         <IonItem>{input}</IonItem>
       </IonContent>
       <IonFooter className="ion-padding">
         <IonToolbar>
-          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+          <IonButton routerLink="/Welcome" color="tertiary">
+            Back to Login
+          </IonButton>
         </IonToolbar>
       </IonFooter>
     </IonPage>

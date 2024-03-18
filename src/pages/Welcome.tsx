@@ -18,14 +18,14 @@ const Welcome: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="tertiary">
           <IonTitle>
             <h1>My Groceries</h1>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonCard>
+        <IonCard color="light">
           <IonImg src={storefront} />
           <IonCardHeader>
             <IonCardTitle>Welcome to My Groceries</IonCardTitle>

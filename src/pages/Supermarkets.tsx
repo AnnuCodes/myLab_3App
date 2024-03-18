@@ -19,7 +19,7 @@ const Supermarkets: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="tertiary">
           <IonButtons slot="start">
             <IonBackButton></IonBackButton>
           </IonButtons>
@@ -34,7 +34,7 @@ const Supermarkets: React.FC = () => {
               icon={storefrontOutline}
               color="success"
             ></IonIcon>
-            <h1>React Market</h1>
+            <h1>Awesome Mart</h1>
           </IonItem>
           <IonItem>
             <IonIcon
@@ -42,13 +42,15 @@ const Supermarkets: React.FC = () => {
               icon={storefrontOutline}
               color="success"
             ></IonIcon>
-            <h1>Ionic Supermarket</h1>
+            <h1>Wonder Supermarket</h1>
           </IonItem>
         </IonList>
       </IonContent>
       <IonFooter className="ion-padding">
         <IonToolbar>
-          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+          <IonButton routerLink="/Welcome" color="tertiary">
+            Back to Login
+          </IonButton>
         </IonToolbar>
       </IonFooter>
     </IonPage>

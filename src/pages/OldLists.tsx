@@ -18,7 +18,7 @@ const OldLists: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="tertiary">
           <IonButtons slot="start">
             <IonBackButton></IonBackButton>
           </IonButtons>
@@ -33,7 +33,9 @@ const OldLists: React.FC = () => {
       </IonContent>
       <IonFooter className="ion-padding">
         <IonToolbar>
-          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+          <IonButton routerLink="/Welcome" color="tertiary">
+            Back to Login
+          </IonButton>
         </IonToolbar>
       </IonFooter>
     </IonPage>
