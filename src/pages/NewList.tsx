@@ -13,8 +13,8 @@ import {
 import React, { useState } from "react";
 
 const NewList: React.FC = () => {
-  const [list, setlist] = useState("");
-  const handleClick = () => {};
+  const [input, setInput] = useState<string>("");
+
   return (
     <IonPage>
       <IonHeader>
@@ -27,11 +27,17 @@ const NewList: React.FC = () => {
       </IonHeader>
       <IonContent className="ion-padding">
         <IonItem>
-          <IonInput label="Text input" placeholder="Write list here"></IonInput>
+          <IonInput
+            label="Text input"
+            placeholder="Write list here"
+            value={input}
+            onIonChange={(e: any) => setInput(e.target.value)}
+          ></IonInput>
           <IonItem slot="end">
-            <IonButton onClick={handleClick}>Save</IonButton>
+            <IonButton>Save</IonButton>
           </IonItem>
         </IonItem>
+        <IonItem>{input}</IonItem>
       </IonContent>
     </IonPage>
   );

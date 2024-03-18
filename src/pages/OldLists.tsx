@@ -9,6 +9,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
+
 import React from "react";
 
 const OldLists: React.FC = () => {
@@ -23,8 +24,9 @@ const OldLists: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
+        <IonTitle>List name</IonTitle>
         <IonList>
-          <IonItem>Lists go here</IonItem>
+          <IonItem>List for React Market</IonItem>
         </IonList>
       </IonContent>
     </IonPage>
