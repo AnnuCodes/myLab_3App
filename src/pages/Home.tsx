@@ -1,11 +1,16 @@
 import {
   IonActionSheet,
+  IonButton,
+  IonCol,
   IonContent,
+  IonFooter,
+  IonGrid,
   IonHeader,
   IonItem,
   IonList,
   IonMenu,
   IonPage,
+  IonRow,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -15,7 +20,7 @@ import "./Home.css";
 const Home: React.FC = () => {
   return (
     <IonPage>
-      <IonContent fullscreen>
+      <IonContent fullscreen className="ion-padding">
         <IonHeader>
           <IonToolbar>
             <IonTitle size="large">My groceries</IonTitle>
@@ -28,12 +33,16 @@ const Home: React.FC = () => {
           <IonItem button routerLink="/OldLists">
             Select previous list
           </IonItem>
-
           <IonItem button routerLink="/Supermarkets">
-            Supermarket locations
+            Supermarkets
           </IonItem>
         </IonList>
       </IonContent>
+      <IonFooter className="ion-padding">
+        <IonToolbar>
+          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };

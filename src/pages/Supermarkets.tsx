@@ -1,7 +1,9 @@
 import {
   IonBackButton,
+  IonButton,
   IonButtons,
   IonContent,
+  IonFooter,
   IonHeader,
   IonIcon,
   IonItem,
@@ -44,6 +46,11 @@ const Supermarkets: React.FC = () => {
           </IonItem>
         </IonList>
       </IonContent>
+      <IonFooter className="ion-padding">
+        <IonToolbar>
+          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };

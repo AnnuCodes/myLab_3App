@@ -24,6 +24,7 @@ import "./theme/variables.css";
 import OldLists from "./pages/OldLists";
 import NewList from "./pages/NewList";
 import Supermarkets from "./pages/Supermarkets";
+import Welcome from "./pages/Welcome";
 
 setupIonicReact();
 
@@ -34,12 +35,13 @@ const App: React.FC = () => (
         onPointerEnterCapture={undefined}
         onPointerLeaveCapture={undefined}
       >
+        <Route exact path="/Welcome" component={Welcome}></Route>
         <Route exact path="/home" component={Home}></Route>
         <Route exact path="/NewList" component={NewList}></Route>
         <Route exact path="/OldLists" component={OldLists}></Route>
         <Route exact path="/Supermarkets" component={Supermarkets}></Route>
         <Route exact path="/">
-          <Redirect to="/home" />
+          <Redirect to="/Welcome" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

@@ -3,6 +3,7 @@ import {
   IonButton,
   IonButtons,
   IonContent,
+  IonFooter,
   IonHeader,
   IonInput,
   IonItem,
@@ -39,6 +40,11 @@ const NewList: React.FC = () => {
         </IonItem>
         <IonItem>{input}</IonItem>
       </IonContent>
+      <IonFooter className="ion-padding">
+        <IonToolbar>
+          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };

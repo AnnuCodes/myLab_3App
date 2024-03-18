@@ -1,7 +1,9 @@
 import {
   IonBackButton,
+  IonButton,
   IonButtons,
   IonContent,
+  IonFooter,
   IonHeader,
   IonItem,
   IonList,
@@ -29,6 +31,11 @@ const OldLists: React.FC = () => {
           <IonItem>List for React Market</IonItem>
         </IonList>
       </IonContent>
+      <IonFooter className="ion-padding">
+        <IonToolbar>
+          <IonButton routerLink="/Welcome">Back to Login</IonButton>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };
