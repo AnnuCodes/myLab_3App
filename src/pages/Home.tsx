@@ -10,12 +10,8 @@ import {
 } from "@ionic/react";
 
 import "./Home.css";
-import { useState } from "react";
-import OldLists from "./OldLists";
-import { Redirect } from "react-router";
 
 const Home: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <IonPage>
       <IonHeader>
@@ -30,7 +26,9 @@ const Home: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <IonList>
-          <IonItem button>New list</IonItem>
+          <IonItem button routerLink="/NewList">
+            New list
+          </IonItem>
           <IonItem button routerLink="/OldLists">
             Select previous list
           </IonItem>

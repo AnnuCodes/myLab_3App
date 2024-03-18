@@ -22,6 +22,7 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import OldLists from "./pages/OldLists";
+import NewList from "./pages/NewList";
 
 setupIonicReact();
 
@@ -33,6 +34,7 @@ const App: React.FC = () => (
         onPointerLeaveCapture={undefined}
       >
         <Route exact path="/home" component={Home}></Route>
+        <Route exact path="/NewList" component={NewList}></Route>
         <Route exact path="/OldLists" component={OldLists}></Route>
         <Route exact path="/">
           <Redirect to="/home" />
