@@ -11,6 +11,8 @@ import {
 
 import "./Home.css";
 import { useState } from "react";
+import OldLists from "./OldLists";
+import { Redirect } from "react-router";
 
 const Home: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,24 +31,10 @@ const Home: React.FC = () => {
         </IonHeader>
         <IonList>
           <IonItem button>New list</IonItem>
-          <IonItem
-            button
-            id="open-action-sheet"
-            onClick={() => setIsOpen(true)}
-          >
+          <IonItem button routerLink="/OldLists">
             Select previous list
           </IonItem>
-          <IonActionSheet
-            isOpen={isOpen}
-            trigger="open-action-sheet"
-            header="actions"
-            buttons={[
-              {
-                text: "Delete",
-                role: "destructive",
-              },
-            ]}
-          ></IonActionSheet>
+
           <IonItem button>Supermarket locations</IonItem>
         </IonList>
       </IonContent>
